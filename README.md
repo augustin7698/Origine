@@ -1,3 +1,3 @@
 # Origine
 Javascript Package of many function
-visit my website for more informations
+visit my website for more informations : https://origine.ml

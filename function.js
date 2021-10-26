@@ -1,5 +1,5 @@
 //CONFIG
-console.log('Origine is connected');
+console.log('Origine is connect');
 
 function app(jquery, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
 	if (jquery == 1) {

@@ -1,7 +1,7 @@
 //CONFIG
 console.log('Origine is connected');
 
-function config(jquery, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
+function app(jquery, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
 	if (jquery == 1) {
 		include("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
 	}

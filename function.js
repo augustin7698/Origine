@@ -1,6 +1,6 @@
 //CONFIG
 console.log('Origine is connected');
-include("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+NAME('head')[0].innerHTML = NAME('head')[0].innerHTML + "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>";
 
 function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
 	if (choreographer == 1) {

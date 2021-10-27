@@ -1,6 +1,5 @@
 //CONFIG
 console.log('Origine is connected');
-NAME('head')[0].innerHTML = NAME('head')[0].innerHTML + "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>";
 
 function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
 	if (choreographer == 1) {
@@ -63,10 +62,17 @@ function repeat(NumRepeat, FuncToExe, arg1, arg2, arg3, arg4, arg5, arg6, arg7, 
 	}
 }
 
-function interval(func, evry) {
-	setInterval(function() {
-		func
-	},evry);
+function get(url) {
+	fetch(url)
+		.then(function(reponse) {
+			if (reponse.ok) {
+				return reponse.json();
+			}
+		}).then(function(value) {
+			console.log(value);
+		}).catch(function(err) {
+			return "erreur"
+		});
 }
 
 function copy(ToCopy, Mess) {
@@ -93,25 +99,52 @@ function date() {
 }
 
 function include(file) {
+	file = file.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/')
+	file = file.replace('/blob/', '@')
 	$.getScript(file);
+	return file
 }
 
 // MODIFY YOUR PAGE
 
-function addhtml(Id, NewContent) {
+function addid(Id, NewContent) {
 	document.getElementById(Id).innerHTML = document.getElementById(Id).innerHTML + NewContent;
 }
 
-function delhtml(Id) {
-	document.getElementById(Id).innerHTML = "<!--suppressed content-->";
+function delid(Id) {
+	document.getElementById(Id).innerHTML = " ";
 }
 
-function modhtml(Id, NewContent) {
+function modid(Id, NewContent) {
 	document.getElementById(Id).innerHTML = NewContent;
 }
 
+function addclass(clas, num, NewContent) {
+	document.getElementsByClassName(clas)[num].innerHTML = document.getElementById(Id).innerHTML + NewContent;
+}
+
+function delclass(clas, num) {
+	document.getElementsByClassName(clas)[num].innerHTML = " ";
+}
+
+function modclass(clas, num, NewContent) {
+	document.getElementsByClassName(clas)[num].innerHTML = NewContent;
+}
+
+function addtag(tag, num, NewContent) {
+	document.getElementsByTagName(tag)[num].innerHTML = document.getElementById(Id).innerHTML + NewContent;
+}
+
+function deltag(tag, num) {
+	document.getElementsByTagName(tag)[num].innerHTML = " ";
+}
+
+function modtag(tag, num, NewContent) {
+	document.getElementsByTagName(tag)[num].innerHTML = NewContent;
+}
+
 function stylehtml(style_css) {
-	document.getElementById('script').innerHTML = document.getElementById('script').innerHTML + "<style type='text/css'>" + style_css + "</style>";
+	document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<style type='text/css'>" + style_css + "</style>";
 }
 
 function ID(id) {
@@ -128,15 +161,15 @@ function NAME(name) {
 
 // NUMERICS
 
-function randomnumber(NumMin, NumMax) {
+function random(NumMin, NumMax) {
 	return Math.floor(Math.random() * (NumMax - NumMin_or_NumToRound + 1));
 }
 
-function roundnumber(number) {
+function round(number) {
 	return Math.floor(number);
 }
 
-function isnumeral(number) {
+function isnumeric(number) {
 	num = "'" + number + "'";
 	if(Number.isInteger(Math.floor(num))) {
 		return true;

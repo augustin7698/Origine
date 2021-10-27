@@ -1,9 +1,10 @@
 //CONFIG
 console.log('Origine is connected');
+include("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
 
-function app(jquery, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
-	if (jquery == 1) {
-		include("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
+	if (choreographer == 1) {
+		include("https://cdn.jsdelivr.net/gh/christinecha/choreographer-js@01694a9ab50e69f7d459b3ca2d9a5f6e4c56c776/index.js");
 	}
 	if (react == 1) {
 		include("https://unpkg.com/react-dom@16/umd/react-dom.development.js");
@@ -111,6 +112,18 @@ function modhtml(Id, NewContent) {
 
 function stylehtml(style_css) {
 	document.getElementById('script').innerHTML = document.getElementById('script').innerHTML + "<style type='text/css'>" + style_css + "</style>";
+}
+
+function ID(id) {
+	return document.getElementById(id);
+}
+
+function CLASS(clas) {
+	return document.getElementsByClassName(clas);
+}
+
+function NAME(name) {
+	return document.getElementsByTagName(name);
 }
 
 // NUMERICS

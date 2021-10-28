@@ -85,6 +85,94 @@ function copy(ToCopy, Mess) {
 	});
 }
 
+function select() {
+	return window.getSelection().toString()
+}
+
+function key(arg) {
+	if (arg = 'info') {
+		return {
+			'supp(au dessus de entrer)':8,
+			'tab':9,
+			'entrer':13,
+			'maj':16,
+			'ctrl':17,
+			'alt gr':18,
+			'maj automatique':20,
+			'echap':27,
+			'espace':32,
+			'fleche gauche':37,
+			'fleche haut':38,
+			'fleche droite':39,
+			'fleche bas':40,
+			'suppr':46,
+			'0':48,
+			'1':49,
+			'2':50,
+			'3':51,
+			'4':52,
+			'5':53,
+			'6':54,
+			'7':55,
+			'8':56,
+			'9':57,
+			'a':65,
+			'b':66,
+			'c':67,
+			'd':68,
+			'e':69,
+			'f':70,
+			'g':71,
+			'h':72,
+			'i':73,
+			'j':74,
+			'k':75,
+			'l':76,
+			'm':77,
+			'n':78,
+			'o':79,
+			'p':80,
+			'q':81,
+			'r':82,
+			's':83,
+			't':84,
+			'u':85,
+			'v':86,
+			'w':87,
+			'x':88,
+			'y':89,
+			'z':90,
+			'window':91,
+			'menu': 93,
+			'f1':112,
+			'f2':113,
+			'f3':114,
+			'f4':115,
+			'f5':116,
+			'f6':117,
+			'f7':118,
+			'f8':119,
+			'f9':120,
+			'f10':121,
+			'f11':122,
+			'f12':123,
+			'£':186,
+			'+':187,
+			'?':188,
+			'.':190,
+			'':191,
+			'%':192,
+			'µ':220,
+			'¨':221,
+			'²':222,
+			'§':223,
+
+		}
+	} else {
+		return event.keyCode;
+	}
+}
+
 function date() {
 	var heure = new Date();
 	return date = {
@@ -101,8 +189,8 @@ function date() {
 function include(file) {
 	file = file.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/')
 	file = file.replace('/blob/', '@')
-	$.getScript(file);
 	return file
+	$.getScript(file);
 }
 
 // MODIFY YOUR PAGE
@@ -223,4 +311,21 @@ function news(content) {
 	w.document.open();
 	w.document.write(content);
 	w.document.close();
+}
+
+function ALLCLASS(clas) {
+	restedesclass = true;
+	classnum = 0;
+	num = null;
+	while (restedesclass == true) {
+		z = document.getElementsByClassName(clas)[y]
+		if (z != undefined)  {
+			num = num + ',' + classnum;
+			console.log(num);
+			y = y + 1;
+		} else {
+			restedesclass = false;
+		}
+	}
+	console.log(document.getElementsByClassName(clas)[num]);
 }

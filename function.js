@@ -198,8 +198,8 @@ function date() {
 function include(file) {
 	file = file.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/')
 	file = file.replace('/blob/', '@')
-	return file
 	$.getScript(file);
+	return file
 }
 
 // MODIFY YOUR PAGE

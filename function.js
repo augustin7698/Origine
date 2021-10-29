@@ -178,7 +178,7 @@ function key(event) {
 			226: '<'
 		}
 	} else {
-			return event.keyCode;
+		return event.keyCode;
 	}
 }
 

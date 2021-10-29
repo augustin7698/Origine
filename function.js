@@ -164,7 +164,7 @@ function key(event) {
 			173: 'couper le son',
 			174: 'son -',
 			175: 'son +',
-			179: 'play/pause'
+			179: 'play/pause',
 			186: '£',
 			187: '+',
 			188: '?',

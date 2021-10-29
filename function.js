@@ -204,56 +204,151 @@ function include(file) {
 
 // MODIFY YOUR PAGE
 
-function addid(Id, NewContent) {
-	document.getElementById(Id).innerHTML = document.getElementById(Id).innerHTML + NewContent;
+function add(id_class_tag, content, num) {
+	finit = false;
+	if (id_class_tag.search("#") == 0) {
+		id_class_tag = id_class_tag.replace('#', '');
+		document.getElementById(id_class_tag).innerHTML = document.getElementById(id_class_tag).innerHTML + content;
+		finit = true;
+	}
+	if (id_class_tag.search(/[.]/g) == 0 && finit == false) {
+		finit = true;
+		id_class_tag = id_class_tag.replace('.', '');
+		if (num != undefined) {
+			document.getElementsByClassName(id_class_tag)[num].innerHTML = document.getElementsByClassName(id_class_tag)[num].innerHTML + content;
+		} else {
+			num = 0;
+			while (document.getElementsByClassName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByClassName(id_class_tag)[num].innerHTML = document.getElementsByClassName(id_class_tag)[num].innerHTML + content;
+			}
+		}
+	}
+	if (finit == false) {
+		if (num != undefined) {
+			document.getElementsByTagName(id_class_tag)[num].innerHTML = document.getElementsByTagName(id_class_tag)[num].innerHTML + content;
+		} else {
+			num = 0;
+			while (document.getElementsByTagName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByTagName(id_class_tag)[num].innerHTML = document.getElementsByTagName(id_class_tag)[num].innerHTML + content;
+			}
+		}
+	}
 }
 
-function delid(Id) {
-	document.getElementById(Id).innerHTML = " ";
+function mod(id_class_tag, content, num) {
+	finit = false;
+	if (id_class_tag.search("#") == 0) {
+		id_class_tag = id_class_tag.replace('#', '');
+		document.getElementById(id_class_tag).innerHTML = content;
+		finit = true;
+	}
+	if (id_class_tag.search(/[.]/g) == 0 && finit == false) {
+		finit = true;
+		id_class_tag = id_class_tag.replace('.', '');
+		if (num != undefined) {
+			document.getElementsByClassName(id_class_tag)[num].innerHTML = content;
+		} else {
+			num = 0;
+			while (document.getElementsByClassName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByClassName(id_class_tag)[num].innerHTML = content;
+			}
+		}
+	}
+	if (finit == false) {
+		if (num != undefined) {
+			document.getElementsByTagName(id_class_tag)[num].innerHTML = content;
+		} else {
+			num = 0;
+			while (document.getElementsByTagName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByTagName(id_class_tag)[num].innerHTML = content;
+			}
+		}
+	}
 }
 
-function modid(Id, NewContent) {
-	document.getElementById(Id).innerHTML = NewContent;
+function del(id_class_tag, num) {
+	finit = false;
+	if (id_class_tag.search("#") == 0) {
+		id_class_tag = id_class_tag.replace('#', '');
+		document.getElementById(id_class_tag).innerHTML = null;
+		finit = true;
+	}
+	if (id_class_tag.search(/[.]/g) == 0 && finit == false) {
+		finit = true;
+		id_class_tag = id_class_tag.replace('.', '');
+		if (num != undefined) {
+			document.getElementsByClassName(id_class_tag)[num].innerHTML = null;
+		} else {
+			num = 0;
+			while (document.getElementsByClassName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByClassName(id_class_tag)[num].innerHTML = null;
+			}
+		}
+	}
+	if (finit == false) {
+		if (num != undefined) {
+			document.getElementsByTagName(id_class_tag)[num].innerHTML = null;
+		} else {
+			num = 0;
+			while (document.getElementsByTagName(id_class_tag)[num] != undefined) {
+				num = num + 1;
+			}
+			while (num != 0) {
+				num = num - 1;
+				document.getElementsByTagName(id_class_tag)[num].innerHTML = null;
+			}
+		}
+	}
 }
 
-function addclass(clas, num, NewContent) {
-	document.getElementsByClassName(clas)[num].innerHTML = document.getElementById(Id).innerHTML + NewContent;
+function elementffectif(clas) {
+	numéro = 0;
+	if (clas.search(/[.]/g) == 0) {
+		clas = clas.replace(/[.]/g, '');
+		while (document.getElementsByClassName(clas)[numéro] != undefined) {
+			numéro = numéro + 1;
+		}
+	} else {
+		if (clas.search('#') == 0) {
+			clas = clas.replace('#', '');
+			if (document.getElementById(clas) != undefined) {
+				return 1
+			} else {
+				return 0
+			}
+		} else {
+			if (document.getElementsByTagName(clas)[numéro] != undefined) {
+				while (document.getElementsByTagName(clas)[numéro] != undefined) {
+					numéro = numéro + 1;
+				}
+			}
+		}
+	}
+	return numéro;
 }
 
-function delclass(clas, num) {
-	document.getElementsByClassName(clas)[num].innerHTML = " ";
-}
-
-function modclass(clas, num, NewContent) {
-	document.getElementsByClassName(clas)[num].innerHTML = NewContent;
-}
-
-function addtag(tag, num, NewContent) {
-	document.getElementsByTagName(tag)[num].innerHTML = document.getElementById(Id).innerHTML + NewContent;
-}
-
-function deltag(tag, num) {
-	document.getElementsByTagName(tag)[num].innerHTML = " ";
-}
-
-function modtag(tag, num, NewContent) {
-	document.getElementsByTagName(tag)[num].innerHTML = NewContent;
-}
-
-function stylehtml(style_css) {
+function style(style_css) {
 	document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<style type='text/css'>" + style_css + "</style>";
-}
-
-function ID(id) {
-	return document.getElementById(id);
-}
-
-function CLASS(clas) {
-	return document.getElementsByClassName(clas);
-}
-
-function NAME(name) {
-	return document.getElementsByTagName(name);
 }
 
 // NUMERICS
@@ -320,21 +415,4 @@ function news(content) {
 	w.document.open();
 	w.document.write(content);
 	w.document.close();
-}
-
-function ALLCLASS(clas) {
-	restedesclass = true;
-	classnum = 0;
-	num = null;
-	while (restedesclass == true) {
-		z = document.getElementsByClassName(clas)[y]
-		if (z != undefined)  {
-			num = num + ',' + classnum;
-			console.log(num);
-			y = y + 1;
-		} else {
-			restedesclass = false;
-		}
-	}
-	console.log(document.getElementsByClassName(clas)[num]);
 }

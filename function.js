@@ -52,7 +52,7 @@ function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bo
 async function wait(Ms, FuncToExe, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) {
 	await new Promise(resolve => setTimeout(resolve, Ms));
 	if (FuncToExe == "" || FuncToExe == null) {} else {
-		eval(arguments[1] + (arg1 + ',' + arg2 + ',' + arg3 + ',' + arg4 + ',' + arg5 + ',' + arg6 + ',' + arg7 + ',' + arg8 + ',' + arg9 + ',' + arg10));
+		eval(arguments[1] + '(' + arg1 + ',' + arg2 + ',' + arg3 + ',' + arg4 + ',' + arg5 + ',' + arg6 + ',' + arg7 + ',' + arg8 + ',' + arg9 + ',' + arg10 + ')');
 	}
 }
 

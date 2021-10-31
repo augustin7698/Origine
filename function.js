@@ -354,7 +354,7 @@ function style(style_css) {
 // NUMERICS
 
 function random(NumMin, NumMax) {
-	return Math.floor(Math.random() * (NumMax - NumMin_or_NumToRound + 1));
+	return Math.floor(Math.random() * (NumMax - NumMin + 1));
 }
 
 function round(number) {

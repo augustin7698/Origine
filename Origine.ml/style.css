@@ -1,0 +1,464 @@
+body {
+	background: #000;
+	font-family: arial;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+div {
+	display: flex;
+	justify-content: space-between;
+}
+
+h1 {
+	font-size: 130px;
+	width: 100%;
+	margin-top: 150px;
+	animation: flote 10000ms infinite;
+}
+
+#img {
+	margin: 50px 10% 100px 100px;
+	animation: earth 50000ms infinite linear;
+	z-index: -5;
+	width: 457px;
+	height: 480px;
+	opacity: 100%;
+}
+
+#img1 {
+	margin: 20% 0 0 40%;
+	z-index: -6;
+	position: absolute;
+	width: 724px;
+	height: 155px;
+	transform-origin: right;
+	opacity: 100%;
+}
+
+@keyframes moon {
+	0% {
+		margin-left: 30%;
+		transform: rotate(40deg);
+	}
+
+	85% {
+		margin-top: -260px;
+		transform: rotate(-180deg);
+	}
+
+	100% {
+		margin-left: 30%;
+		transform: rotate(-319deg);
+	}
+}
+
+@keyframes moon2 {
+	0% {
+		margin-left: 30%;
+		transform: rotate(40deg);
+	}
+
+	85% {
+		margin-top: -150px;
+		transform: rotate(-180deg);
+	}
+
+	100% {
+		margin-left: 30%;
+		transform: rotate(-319deg);
+	}
+}
+
+@keyframes moon3 {
+	0% {
+		margin-left: 25%;
+		transform: rotate(40deg);
+	}
+
+	85% {
+		margin-top: -125px;
+		transform: rotate(-180deg);
+	}
+
+	100% {
+		margin-left: 25%;
+		transform: rotate(-319deg);
+	}
+}
+
+@keyframes moon4 {
+	0% {
+		margin-left: 20%;
+		transform: rotate(40deg);
+	}
+
+	85% {
+		margin-top: -85px;
+		transform: rotate(-180deg);
+	}
+
+	100% {
+		margin-left: 20%;
+		transform: rotate(-319deg);
+	}
+}
+
+@keyframes earth {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: scale(1);
+		transform: rotate(-0deg);
+	}
+}
+
+@keyframes flote {
+	0% {
+		margin-top: 150px;
+		transform: scale(1.2);
+	}
+
+	50% {
+		margin-top: 190px;
+		transform: scale(1);
+	}
+
+	100% {
+		margin-top: 150px;
+		transform: scale(1.2);
+	}
+}
+
+section {
+	width: 100%;
+	z-index: 3;
+}
+
+@keyframes fadein {
+	0% {
+		opacity:0;
+	}
+
+	100% {
+		opacity:1;
+	}
+}
+
+#install > #script > #textarea, #textarea2 {
+	cursor: pointer;
+}
+
+
+
+#gradient {
+	height: 100px;
+	background: linear-gradient(5deg, #fff 20%, #000 70%);
+	margin: 0;
+}
+
+#gradient2 {
+	height: 100px;
+	background: linear-gradient(5deg, #000 20%, #fff 70%);
+	margin: 0;
+	box-shadow: inset -11px 20px 20px 7px #fff;
+}
+
+#section {
+	width: 100%;
+	height: 150px;
+	margin: 100px auto;
+	background: #fff;
+	box-shadow: 0 0 12px 20px #fff;
+	transform: rotate(5deg);
+	zoom: 130%;
+	color: #000;
+}
+
+#section2 {
+	width: 100%;
+	height: 20px;
+	margin: 100px auto;
+	background: #fff;
+	box-shadow: 0 0 12px 20px #fff;
+	transform: rotate(5deg);
+	zoom: 130%;
+	color: #000;
+}
+
+#section > h2, #section > nav {
+	zoom: 70%;
+}
+
+.rotate {
+	transform: rotate(-5deg);
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	margin-top: 100px;
+}
+
+nav > a > p {
+	color: #000;
+	margin: 0 50px;
+	font-size: 25px;
+}
+
+nav > a {
+	text-decoration: none;
+}
+
+nav > a > p:hover {
+	text-decoration: underline #000;
+}
+
+#script {
+	display: block;
+}
+
+textarea, #form > input {
+	color: #fff;
+	border-radius: 5px;
+	border: solid 1px;
+	background: #000;
+	resize: none;
+	overflow: hidden;
+}
+
+#textarea {
+	width: 960px;
+	height: 16px;
+	font-size: 15px;
+	text-align: left;
+}
+
+#textarea2 {
+	width: 660px;
+	height: 16px;
+	font-size: 15px;
+	text-align: left;
+}
+
+.textarea3 {
+	width: 75%;
+	height: 30px;
+	margin: 0 auto 20px auto;
+	font-size: 12px;
+	text-align: left;
+}
+
+#functions {
+	margin-top: 200px;
+}
+
+u {
+	text-decoration: bold underline #fff;
+	font-size: 120%;
+}
+
+hr {
+	width: 50%;
+	background: #fff;
+	height: 3px;
+	border: 2px solid #fff;
+	border-radius: 0 0 3px 3px;
+	margin: 0 auto 20px auto;
+}
+
+#form {
+	width: 800px;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	margin: 50px auto;
+	padding: 10px 0 40px 0;
+}
+
+#form > h3 {
+	text-decoration: underline #fff;
+}
+
+#form > h4 {
+	cursor: pointer;
+	background: #000;
+	color: #fff;
+	border: solid #fff 2px;
+	border-radius: 5px;
+	margin: 0 auto 20px auto;
+	width: 40%;
+}
+
+#form > h4:hover {
+	background: #696969;
+}
+
+#error {
+	display: none;
+}
+
+h4 {
+	margin: 0;
+}
+
+.function {
+	text-align: left;
+	font-size: 16px;
+	margin: 1px 150px 5px 150px;
+}
+
+@media only screen and (max-width: 900px) {
+	body  {
+		display: none;
+	}
+
+	#error {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 10000px) {
+	#img1 {
+		animation: moon 10000ms infinite linear;
+	}
+}
+
+@media only screen and (max-width: 1320px) {
+	#img1 {
+		animation: moon2 10000ms infinite linear;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#img1 {
+		animation: moon3 10000ms infinite linear;
+	}
+}
+
+
+@media only screen and (max-width: 1100px) {
+	#img1 {
+		animation: moon4 10000ms infinite linear;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+} 
+
+::-webkit-scrollbar-thumb {
+	background: #696969;
+	border: solid #fff 2px;
+	border-radius: 30px;
+}
+
+#functions > section {
+	width: 93%;
+	padding: 0 0 50px 0;
+	margin: 0 auto 50px 75px;
+	border-radius: 7px;
+	background: #000;
+	border-radius: 10px;
+	border: solid 1px #fff;
+}
+
+#div1 {
+	position: absolute;
+	margin: 100px 0 0 30px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 9px;
+	height: 4600px;
+}
+
+#div2 {
+	position: absolute;
+	margin: 90px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div3 {
+	position: absolute;
+	margin: 1145px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div4 {
+	position: absolute;
+	margin: 1650px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div5 {
+	position: absolute;
+	margin: 2550px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+
+#div6 {
+	position: absolute;
+	margin: 3100px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div7 {
+	position: absolute;
+	margin: 3525px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div8 {
+	position: absolute;
+	margin: 3975px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#div9 {
+	position: absolute;
+	margin: 4400px 0 0 20px;
+	background: #fff;
+	border: none;
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}

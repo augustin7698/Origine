@@ -1,4 +1,4 @@
-//CONFIG
+//CONFIGURATION
 console.log('Origine is connected');
 
 function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {

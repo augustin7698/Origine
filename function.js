@@ -1,5 +1,5 @@
 //CONFIG
-console.log('Origine is connected');
+console.log('Origine is connecte');
 
 function app(choreographer, react, vue, angular, D3, dojo, anime, AOS, chart, bootstrapp) {
 	if (choreographer == 1) {

@@ -1,20 +1,22 @@
 //CONFIGURATION
 console.log('Origine is connected');
 
-include("https://cdn.jsdelivr.net/gh/christinecha/choreographer-js@01694a9ab50e69f7d459b3ca2d9a5f6e4c56c776/index.js"); // choreographer
-include("https://unpkg.com/react-dom@16/umd/react-dom.development.js"); // react
-include("https://unpkg.com/react@16/umd/react.development.js"); // react
-include("https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"); // vue
-include("https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"); // angular
-include("https://d3js.org/d3.v7.min.js"); // D3
-include("https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"); // dojo
-include("https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"); // anime
-include("https://unpkg.com/aos@2.3.1/dist/aos.js"); // AOS
-document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<link rel='stylesheet' type='text/css' href='https://unpkg.com/aos@2.3.1/dist/aos.css' />"; // AOS
-include("https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"); // chart
-include("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"); // bootstrapp
-document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' />"; // bootstrapp
-
+async function init() {
+	await wait(1000);
+	include("https://cdn.jsdelivr.net/gh/christinecha/choreographer-js@01694a9ab50e69f7d459b3ca2d9a5f6e4c56c776/index.js"); // choreographer
+	include("https://unpkg.com/react-dom@16/umd/react-dom.development.js"); // react
+	include("https://unpkg.com/react@16/umd/react.development.js"); // react
+	include("https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"); // vue
+	include("https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"); // angular
+	include("https://d3js.org/d3.v7.min.js"); // D3
+	include("https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"); // dojo
+	include("https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"); // anime
+	include("https://unpkg.com/aos@2.3.1/dist/aos.js"); // AOS
+	document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<link rel='stylesheet' type='text/css' href='https://unpkg.com/aos@2.3.1/dist/aos.css' />"; // AOS
+	include("https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"); // chart
+	include("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"); // bootstrapp
+	document.getElementsByTagName('head')[0].innerHTML = document.getElementsByTagName('head')[0].innerHTML + "<link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' />"; // bootstrapp
+}
 //FUNCTION
 
 // USEFUL SIMPLE FUNCTION
@@ -361,3 +363,5 @@ function news(content) {
 	w.document.write(content);
 	w.document.close();
 }
+
+init()

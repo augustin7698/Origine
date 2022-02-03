@@ -9,7 +9,7 @@
 	<link rel="icon" href="origine.jpg" />
 	<link rel="apple-touch-icon" href="origine.jpg" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script src="https://cdn.jsdelivr.net/gh/augustin7698/Origine@main/function.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/augustin7698/Origine/function.js"></script>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 <body id="body">
@@ -50,22 +50,16 @@
 			<h4>ajoutez seulement le script suivant dans le head de votre(cliquez pour copier)</h4>
 			<br />
 			<textarea id="textarea" readonly="readonly" onclick="func()">
-<script src="https://cdn.jsdelivr.net/gh/augustin7698/Origine@ab3c55e7502dd4e59ce0705d4b4c6f3b7ccad29a/function.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/augustin7698/Origine/function.js"></script>
 			</textarea>
 			<textarea id="textarea2" readonly="readonly" onclick="func2()">
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 			</textarea>
 		</div>
 	<section id="functions">
 		<h3>liste de toutes le fonctions</h3>
 
 
-		<section>
-			<hr />
-			<h4 class="function">🌱 <u>app</u>: configuerer les bibliothèque js a inclure dans le fichier.<br />
-				✔️ particularité: vous devez entrer en argument de la fonction 0 ou 1  10 fois pour les 10 library disponnibles (choreographer, react, vue, angular, D3, dojo, anime, animate on scoll, chart, bootstrapp),<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">app(0, 1, 0, 1, 0, 0, 1, 0, 0, 1); //inclut react, angular, anime et bootstrapp dans le projet.</textarea>
-		</section>
 		<section>
 			<hr />
 			<h4 class="function">🌱 <u>wait</u>: attendre X milisecondes avant d'éxecuter 'Y' fonction avec 'Z' arguments ou mettre en pause une fonction X millisecondes.<br />
@@ -76,16 +70,6 @@
 			<textarea class="textarea3" readonly="readonly">wait(2000, 'ma_fonction', 'mon_argument'); //attendre 2 secondes, executer 'ma_fonction' avec 'mon_argument' en argument.</textarea>
 			<textarea class="textarea3" readonly="readonly">async function X() {myfunction(); await wait(1000); myfunction2();} //execute myfunction, attend 1 seconde puis execute myfunction2</textarea>
 			</h4>
-		</section>
-		<section>
-			<hr />
-			<h4 class="function">🌱 <u>repeat</u>: repeter une X fois une fonction 'Y' avec 'Z' pour argument.<br />✔️ particularité: si vous ne voulez aucun argument dans votre fonction, vous pouvez supprimer le 3ème argument lors de l'execution de la fonction repeat.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">repeat(5, 'ma_fonction', 'mon_argument'); //executer 5 fois ma fonction 'ma_fonction' avec pour argument 'mon_argument'.</textarea>
-		</section>
-		<section>
-			<hr />
-			<h4 class="function">🌱 <u>get</u>: récupert le contenue d'une API sous format JSON grace à la méthode get.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">get('https://api.gouv.fr/swaggers/ods/api-annuaire-education-v2.json') //collecter les information sur l'annuaire de l'éducaton national française.</textarea>
 		</section>
 		<section>
 			<hr />
@@ -114,8 +98,8 @@
 				&#160;&#160;&#160;&#160;&#160;&#160;minute = le minute,<br />
 				&#160;&#160;&#160;&#160;&#160;&#160;second = la seconde,<br />
 				&#160;&#160;&#160;&#160;&#160;&#160;GMT = l'heure & date complète format englais.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">date.year; //obtenir l'année actuel.</textarea>
-			<textarea class="textarea3" readonly="readonly">date.day; //obtenir le jour actuel.</textarea>
+			<textarea class="textarea3" readonly="readonly">date().year; //obtenir l'année actuel.</textarea>
+			<textarea class="textarea3" readonly="readonly">date().day; //obtenir le jour actuel.</textarea>
 		</section>
 		<section>
 			<hr />
@@ -155,10 +139,10 @@
 		</section>
 		<section>
 			<hr />
-			<h4 class="function">🌱 <u>elementeffectif</u>: obtenir l'effectif d'un element a partire de son id/ sa class ou de son nom.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">elementeffectif('div') //return le nombre de div dans la page.</textarea>
-			<textarea class="textarea3" readonly="readonly">elementeffectif('.div') //return le nombre d'element ayant pour class 'div' dans la page.</textarea>
-			<textarea class="textarea3" readonly="readonly">elementeffectif('#div') //return le nombre d'element ayant pour id 'div' dans la page.</textarea>
+			<h4 class="function">🌱 <u>effectif</u>: obtenir l'effectif d'un element a partire de son id/ sa class ou de son nom.<br />🔥 exemple:</h4>
+			<textarea class="textarea3" readonly="readonly">effectif('div') //return le nombre de div dans la page.</textarea>
+			<textarea class="textarea3" readonly="readonly">effectif('.div') //return le nombre d'element ayant pour class 'div' dans la page.</textarea>
+			<textarea class="textarea3" readonly="readonly">effectif('#div') //return le nombre d'element ayant pour id 'div' dans la page.</textarea>
 		</section>
 
 
@@ -168,12 +152,12 @@
 		<section>
 			<hr />
 			<h4 class="function">🌱 <u>random</u>: Renvoie un nombre entier au hasard entre X et Y.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">random(6, 46); //renvoie un nombre entier entre 6 et 46 comme 33 par exemple.</textarea>
+			<textarea class="textarea3" readonly="readonly">random(5, 8); //peut renvoyer 5, 6 ou 7.</textarea>
 		</section>
 		<section>
 			<hr />
-			<h4 class="function">🌱 <u>round</u>: Renvoie un nombre entier arrondit à partir d'un nombre décimale.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">round(6.67656); //renvoie 7.</textarea>
+			<h4 class="function">🌱 <u>round</u>: Renvoie un nombre entier arrondit à partir d'un nombre décimale avec Y nombre après la virgule.<br />🔥 exemple:</h4>
+			<textarea class="textarea3" readonly="readonly">round(6.67696, 3); //renvoie 6.677.</textarea>
 		</section>
 		<section>
 			<hr />
@@ -185,11 +169,7 @@
 
 
 
-		<section>
-			<hr />
-			<h4 class="function">🌱 <u>autoscroll</u>: scroller une page en attendant X milisecondes pour scroller Y pixels.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">autoscroll(5, 6); //scroller jusqu'à la fin de la page à la vitesse de 6 pixels toutes les 5 milisecondes.</textarea>
-		</section>
+		
 		<section>
 			<hr />
 			<h4 class="function">🌱 <u>goto</u>: aller à l'id 'X'.<br />🔥 exemple:</h4>
@@ -209,12 +189,6 @@
 
 
 
-
-		<section>
-			<hr />
-			<h4 class="function">🌱 <u>redirection</u>: se rediriger vers une autre 'X' page web.<br />🔥 exemple:</h4>
-			<textarea class="textarea3" readonly="readonly">redirection('https://un_url.com'); //ouvrire la page https://un_url.com.</textarea>
-		</section>
 		<section>
 			<hr />
 			<h4 class="function">🌱 <u>news</u>: ouvrire une page avec 'X' contenue.<br />

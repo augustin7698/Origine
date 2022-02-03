@@ -28,8 +28,8 @@ async function wait(Ms, FuncToExe, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg
 
 function copy(ToCopy, alertMessage) {
 	navigator.clipboard.writeText(ToCopy).then(function() {
-		if (Mess != undefined) {
-			alert(Mess);
+		if (alertMessage != undefined) {
+			alert(alertMessage);
 		}
 	}, function() {
 		console.log('Error: document is no focused');

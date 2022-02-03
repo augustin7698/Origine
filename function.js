@@ -147,10 +147,10 @@ function date() {
 }
 
 function include(fileLink) {
-	file = file.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/');
-	file = file.replace('/blob/', '@');
-	$.getScript(file);
-	return file
+	fileLink = fileLink.replace('https://github.com/', 'https://cdn.jsdelivr.net/gh/');
+	fileLink = fileLink.replace('/blob/', '@');
+	$.getScript(fileLink);
+	return fileLink
 }
 
 // MODIFY YOUR PAGE

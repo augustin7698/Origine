@@ -1,5 +1,6 @@
 //CONFIGURATION
 console.log('Origine is connected');
+alert("test");
 
 //FUNCTION
 

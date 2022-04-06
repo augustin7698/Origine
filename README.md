@@ -12,4 +12,4 @@ P"Y8888P"    8P      `Y88P""Y8P"Y8888P"8888P""Y88P'   8I   `Y8888P"Y888
                                   `8, ,8I
                                    `Y8P"</pre>
 <p>Javascript library with many function</p>
-<p>Visit my website for more informations : https://origine.ml</p>
+<p>Visit my website for more informations : https://augustin.cf/origine</p>

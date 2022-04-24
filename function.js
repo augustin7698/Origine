@@ -8,7 +8,7 @@ async function wait(ms, then) {
 
 
 function copy(ToCopy) {
-	navigator.clipboard.writeText(ToCopy).then(azertyuiopqsfghjklmwxcvbn="success" , function() {
+	navigator.clipboard.writeText(ToCopy).then(console.log("copy of " + ToCopy) , function() {
 		console.log('Error: document not focused');
 	});
 }
